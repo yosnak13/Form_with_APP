@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+100.times do |n|
+  name = Faker::Games::Pokemon.name
+  price = Faker::Number.number(digits: 5)
+  description = Faker::Games::Pokemon.name
+  maker_name = Faker::Company.name
+  Product.create!(name: name,
+               price: price,
+               description: name,
+               maker_name: maker_name
+               )
+end
