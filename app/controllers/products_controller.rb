@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :find_prodcut, only: [:show, :edit, :update]
+  before_action :find_product, only: [:show, :edit, :update]
   PER = 20
 
   def index
