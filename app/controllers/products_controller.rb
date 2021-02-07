@@ -7,6 +7,10 @@ PER = 20
     @products = Product.page(params[:page]).per(PER)
   end
 
+  def show
+    @product = Product.find(params[:id])
+  end
+
   def new
     @products = Product.new
   end
