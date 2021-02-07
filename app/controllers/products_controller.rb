@@ -1,14 +1,13 @@
 class ProductsController < ApplicationController
-PER = 20
+  before_action :find_prodcut, only: [:show, :edit, :update]
+  PER = 20
 
   def index
     @products = Product.all
-    # @products = Product.find(params[:id])
     @products = Product.page(params[:page]).per(PER)
   end
 
   def show
-    @product = Product.find(params[:id])
   end
 
   def new
@@ -22,6 +21,12 @@ PER = 20
   end
 
   def edit
+
+  end
+
+  def update
+    @product.update(product_params)
+    redirect_to products_path
   end
 
   def destroy
@@ -30,5 +35,9 @@ PER = 20
   private
   def product_params
     params.require(:product).permit(:name, :price, :description, :maker_name)
+  end
+
+  def find_product
+    @product = Product.find(params[:id])
   end
 end
