@@ -1,0 +1,8 @@
+<h1>新規作成</h1>
+<%= form_with model: @product, local: true do |p| %>
+  <%= p.text_field :name, placeholder:"名前" %>
+  <%= p.number_field :price, placeholder:"12345" %>
+  <%= p.text_area :description, placeholder:"説明" %>
+  <%= p.text_field :maker_name, placeholder:"メーカー名" %>
+  <%= p.submit "送信" %>
+<% end %>
