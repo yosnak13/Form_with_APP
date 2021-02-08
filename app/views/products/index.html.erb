@@ -7,6 +7,7 @@
       <th>price</th>
       <th>description</th>
       <th>maker_name</th>
+      <th>確認</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
       <th><%= p.price %></th>
       <th><%= p.description %></th>
       <th><%= p.maker_name %></th>
+      <th><%= link_to 'show', product_path(p) %></th>
     </tr>
   <% end %>
   </tbody>
