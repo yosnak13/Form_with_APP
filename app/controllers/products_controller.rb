@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :find_product, only: [:index, :show, :edit, :update]
+  before_action :find_product, only: [:show, :edit, :update]
   PER = 20
 
   def index
@@ -11,7 +11,6 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
   end
 
   def create
@@ -21,7 +20,6 @@ class ProductsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update

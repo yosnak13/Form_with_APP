@@ -1,6 +1,7 @@
-<% @product.each do |p|%>
-  <%= p.name %>
-  <%= p.price %>
-  <%= p.description %>
-  <%= p.maker_name %>
-<% end %>
+<h1>商品情報だよ</h1>
+<%= @product.name %>
+<%= @product.price %>
+<%= @product.description %>
+<%= @product.maker_name %>
+
+<%= link_to "戻る", products_path %>
