@@ -24,7 +24,8 @@ class ProductsController < ApplicationController
 
   def update
     @product.update(product_params)
-    redirect_to products_path
+    # byebug
+    redirect_to product_path @product
   end
 
   def destroy

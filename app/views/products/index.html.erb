@@ -8,6 +8,7 @@
       <th>description</th>
       <th>maker_name</th>
       <th>確認</th>
+      <th>編集</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,7 @@
       <th><%= product.description %></th>
       <th><%= product.maker_name %></th>
       <th><%= link_to 'show', product_path(product) %></th>
+      <th><%= link_to 'edit', edit_product_path(product) %></th>
     </tr>
   <% end %>
   </tbody>
