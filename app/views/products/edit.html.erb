@@ -1,4 +1,4 @@
-<h1>編集（form_withを使ってeditするよ）</h1>
+<h1>編集（form_withを使ってupdateするよ）</h1>
 <%= form_with model: @product, local: true do |product| %>
   <%= product.text_field :name, placeholder:"名前" %>
   <%= product.number_field :price, placeholder:"12345" %>
