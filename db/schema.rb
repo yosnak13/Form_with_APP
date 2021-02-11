@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_02_04_115916) do
     t.string "name"
     t.integer "price"
     t.text "description"
-    t.integer "maker_name"
+    t.string "maker_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
