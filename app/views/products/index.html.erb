@@ -9,6 +9,7 @@
       <th>maker_name</th>
       <th>確認</th>
       <th>編集</th>
+      <th>削除</th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,7 @@
       <th><%= product.maker_name %></th>
       <th><%= link_to 'show', product_path(product) %></th>
       <th><%= link_to 'edit', edit_product_path(product) %></th>
+      <th><%= link_to 'delete', product_path(product), method: :delete, data: { confrim: "本当に削除してよろしいですか？" } %></th>
     </tr>
   <% end %>
   </tbody>
