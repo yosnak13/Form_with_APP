@@ -1,5 +1,14 @@
 <h1>商品一覧</h1>
 <%= link_to "新規作成", new_product_path %>
+
+<div class="">
+  <%= form_with url: products_path, method: :get, local: true do |f|%>
+    <h1>商品名</h1>
+    <%= f.text_area :keyword %>
+    <%= f.submit "検索" %>
+  <% end %>
+</div>
+
 <table>
   <thead>
     <tr>
