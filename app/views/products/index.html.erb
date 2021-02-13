@@ -2,9 +2,9 @@
 <%= link_to "新規作成", new_product_path %>
 
 <div class="">
-  <%= form_with url: products_path, method: :get, local: true do |f|%>
-    <h1>商品名</h1>
-    <%= f.text_area :keyword %>
+  <%= form_with scope: :search_product, url: products_path, method: :get, local: true do |f| %>
+    <%= f.label(:name, :"名前") %>
+    <%= f.text_field :name %>
     <%= f.submit "検索" %>
   <% end %>
 </div>
