@@ -3,8 +3,7 @@ class ProductsController < ApplicationController
   PER = 20
 
   def index
-    @products = Product.all
-    @products = Product.page(params[:page]).per(PER)
+    @products = Product.page(params[:page]).per(PER).search_product(params[:keyword])
   end
 
   def show
@@ -32,6 +31,10 @@ class ProductsController < ApplicationController
     @product.destroy
     redirect_to products_path
   end
+
+  # def search
+  #   @result = Product.search(params[:keyword])
+  # end
 
   private
   def product_params
