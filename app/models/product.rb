@@ -6,5 +6,5 @@ class Product < ApplicationRecord
   #     Product.all
   #   end
   # end
-  scope :search_product, -> (keyword) { where("name LIKE?", "%#{keyword}%") if keyword.present? }
+  # scope :search_product, -> (keyword) { where("name LIKE?", "%#{keyword}%") if keyword.present? }
 end

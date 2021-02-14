@@ -3,7 +3,13 @@ class ProductsController < ApplicationController
   PER = 20
 
   def index
-    @products = Product.page(params[:page]).per(PER).search_product(params[:keyword])
+
+    @products = Product.all
+    # @products = Product.search_product(params[:keyword])
+    # @products = Product.page(params[:page]).per(PER).search_product(params[:keyword])
+
+    @products = Product.where(name: "#{params[:keyword]}") if params[:keyword].present?
+
   end
 
   def show
