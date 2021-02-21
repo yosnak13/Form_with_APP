@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   PER = 20
 
   def index
-    # @products = Product.all
+    @products = Product.all
     @products = Product.where(name: "#{params[:keyword]}") if params[:keyword].present?
   end
 
