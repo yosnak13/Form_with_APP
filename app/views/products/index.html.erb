@@ -25,7 +25,7 @@
   <% @products.each do |product|%>
     <tr>
       <th><%= product.name %></th>
-      <th><%= product.price %></th>
+      <th><%= add_comma(product.price) %></th>
       <th><%= product.description %></th>
       <th><%= product.maker_name %></th>
       <th><%= link_to 'show', product_path(product) %></th>
